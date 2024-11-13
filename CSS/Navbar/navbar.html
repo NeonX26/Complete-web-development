@@ -13,18 +13,22 @@
             background-color: #1a1a1a;
             color: #fff;
         }
+
         .nav-container {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
+
         h1 {
             font-size: 30px;
             margin-bottom: 10px;
         }
-        .nav-1{
+
+        .nav-1 {
             background-color: #e0e0e1;
             padding: 10px;
         }
-        .nav-1 ul{
+
+        .nav-1 ul {
             display: flex;
             justify-content: space-around;
             margin: 0;
@@ -33,16 +37,19 @@
             font-size: 15px;
             list-style-type: none;
         }
-        .nav-1 li{
+
+        .nav-1 li {
             display: inline;
         }
-        .nav-1 a{
+
+        .nav-1 a {
             text-decoration: none;
             color: #101010;
             padding: 5px 15px;
             position: relative;
-        } 
-        .nav-1 a::after{
+        }
+
+        .nav-1 a::after {
             content: '';
             position: absolute;
             width: 100%;
@@ -53,19 +60,86 @@
             transform: scaleX(0);
             transition: transform 0.3s ease-in-out;
         }
-        .nav-1 a:hover::after{
+
+        .nav-1 a:hover::after {
             transform: scaleX(1);
         }
-        /* .nav-1 a:hover{
-            background-color: #3f3f9f;
-        } */
-        .nav-1 .lgn-btn{
+
+        .nav-1 .lgn-btn {
             background-color: #5959dc;
             color: #fff;
             border: none;
             padding: 5px 15px;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        .nav-2 {
+            background-color: #e0e0e1;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .nav-2 ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .nav-2 li {
+            margin-bottom: 10px;
+        }
+
+        .nav-2 a {
+            display: block;
+            text-decoration: none;
+            color: #101010;
+            font-size: 15px;
+            display: block;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .nav-2 a:hover {
+            background-color: #3f3f9f;
+            color: #fff;
+        }
+
+        .nav-2 .lgn-btn {
+            background-color: #5959dc;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nav-3{
+            background-color: #e0e0e1;
+            padding: 10px;
+        }
+        .nav-3 ul{
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            font-size: 15px;
+            list-style-type: none;
+        }
+        .nav-3 a{
+            text-decoration: none;
+            color: #101010;
+            padding: 10px;
+            display: block;
+        }
+        .nav-3 .dropdown-content{
+            display: none;
+        }
+        .nav-3 .dropdown:hover .dropdown-content{
+            display: block;
+            position: absolute;
+            background-color: #e0e0e1;
         }
     </style>
 </head>
@@ -82,6 +156,7 @@
             </ul>
         </div>
     </div>
+
     <div class="nav-container">
         <h1>Variation 2: Vertical with hover effect</h1>
         <div class="nav-2">
@@ -90,15 +165,23 @@
                 <li><a href="#">about</a> </li>
                 <li><a href="#">product</a> </li>
             </ul>
+            <button class="lgn-btn">Login</button>
         </div>
     </div>
+
     <div class="nav-container">
         <h1>Variation 3: Horizontal with dropdown</h1>
         <div class="nav-3">
             <ul>
                 <li><a href="#">home</a> </li>
-                <li><a href="#">about</a> </li>
+                <li class="dropdown">
+                    <a href="#">about</a>
+                    <div class="dropdown-content">
+                        <a href="#">Our Story</a><a href="#">Team</a><a href="#">Contact</a>
+                    </div>
+                </li>
                 <li><a href="#">product</a> </li>
+                <li><button class="lgn-btn">login</button></li>
             </ul>
         </div>
     </div>
