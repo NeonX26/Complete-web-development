@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Click on start Button to see Current Time</h1>
+    <h2></h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        console.log("Hello World");
+
+        const sayDate = () => {
+            const date = new Date();
+            const formattedTime = date.getHours().toString().padStart(2, '0') + ':' + 
+                                  date.getMinutes().toString().padStart(2, '0') + ':' + 
+                                  date.getSeconds().toString().padStart(2, '0');
+            document.querySelector("h2").textContent = formattedTime;
+        }
+        let intervalId;
+        document.getElementById("start").addEventListener("click", () => {
+            intervalId = setInterval(sayDate, 1000);
+        });
+        document.getElementById("stop").addEventListener("click", () => {
+            clearInterval(intervalId);
+        });
+    </script>
+</body>
+</html>
